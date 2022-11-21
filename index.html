@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" style="text-align: center">
+      <header class="jumbotron" style="background-color: #222222; color: white">
+        <h1 class="trabalho">IFSULDEMINAS - Teachable Machine Image Model</h1>
+        <p class="if">Campus Machado</p>
+        <p class="nome">Douglas Ricardo Carvalho</p>
+      </header>
+      <div class="card">
+        <div class="card-body">
+          <div class="load-image">
+            <img id="preview" src="image1.png" width="250" alt="" />
+          </div>
+          <div class="send-image">
+            <label for="image_ts">
+              <p id="location-src">Clique para adicionar sua imagem</p>
+              <input
+                type="file"
+                name="image"
+                id="image_ts"
+                onchange="previewImage()"
+              />
+            </label>
+            <button class="btn" onclick="init()">Enviar</button>
+          </div>
+
+          <div class="gooey" id="loading">
+            <span class="dot"></span>
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="result" id="label-container"></div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+      <footer class="panel-footer navbar-fixed-bottom">
+        Todos direitos reservados - Departamento de Computação - IFSULDEMINAS -
+        Campus Machado
+      </footer>
+    </div>
+  </body>
+</html>
